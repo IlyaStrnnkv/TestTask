@@ -1,0 +1,4 @@
+tests/negative/sinus/EmptySinus.class
+tests/positive/OperationWithIntegerTest.class
+tests/negative/division/DivisionByZeroTest.class
+tests/base/BaseTest.class
