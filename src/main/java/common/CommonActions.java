@@ -17,7 +17,7 @@ public class CommonActions {
         switch (PLATFORM_AND_BROWSER){
 
             case("mac_chrome"):
-            System.setProperty("webdriver.chrome.driver", "/Users/strnnkv/IdeaProjects/TestTask/resources/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "/Users/strnnkv/IdeaProjects/TestTask/src/main/resources/chromedriver");
             driver = new ChromeDriver();
             break;
             default:

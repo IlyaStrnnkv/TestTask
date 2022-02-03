@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="/Users/strnnkv/IdeaProjects/TestTask">
+    <test name="/Users/strnnkv/IdeaProjects/TestTask">
         <classes>
-            <class name="tests.positive.OperationWithIntegerTest">
-                <methods>
-                    <include name="operationWithInteger"/>
-                </methods>
-            </class>
-            <class name="tests.negative.division.DivisionByZeroTest">
-                <methods>
-                    <include name="divisionByZero"/>
-                </methods>
-            </class>
-            <class name="tests.negative.sinus.EmptySinus">
-                <methods>
-                    <include name="checkEmptySinus"/>
-                </methods>
-            </class>
-
+            <class name="tests.positive.OperationWithIntegerTest"></class>
+            <class name="tests.negative.sinus.EmptySinusTest"></class>
+            <class name="tests.negative.division.DivisionByZeroTest"></class>
         </classes>
     </test>
 </suite>

@@ -14,7 +14,7 @@ public class GoogleHomePage extends BasePage {
     }
 
     private final By searchString = By.xpath("//input[@jsaction='paste:puy29d;']");
-    private final By findButton = By.xpath("(//input[@class='gNO89b'])[2]");
+    private final By findButton = By.xpath("//div[@class='aajZCb']//div[@class='lJ9FBc']//input[@class='gNO89b']");
 
     public GoogleHomePage enterText () {
         WebElement buttonFind = driver.findElement(searchString);

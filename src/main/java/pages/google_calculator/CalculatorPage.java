@@ -13,22 +13,22 @@ public class CalculatorPage extends BasePage {
     }
 
     private final By inputField = By.xpath("//div[@class='TIGsTb']");
-    private final By leftParenthesis = By.xpath("");
-    private final By rightParenthesis = By.xpath("");
-    private final By plus = By.xpath("");
-    private final By multiplication = By.xpath("");
-    private final By subtraction = By.xpath("");
-    private final By division = By.xpath("");
-    private final By result = By.xpath("");
-    private final By zero = By.xpath("");
-    private final By one = By.xpath("");
-    private final By two = By.xpath("");
-    private final By three = By.xpath("");
-    private final By four = By.xpath("");
-    private final By five = By.xpath("");
-    private final By six = By.xpath("");
-    private final By sinus = By.xpath("");
-    private final By answer = By.xpath("");
+    private final By leftParenthesis = By.xpath("//div[@jsname='j93WEe']");
+    private final By rightParenthesis = By.xpath("//div[@jsname='qCp9A']");
+    private final By plus = By.xpath("//div[@jsname='XSr6wc']");
+    private final By multiplication = By.xpath("//div[@jsname='YovRWb']");
+    private final By subtraction = By.xpath("//div[@jsname='pPHzQc']");
+    private final By division = By.xpath("//div[@jsname='WxTTNd']");
+    private final By result = By.xpath("//div[@jsname='Pt8tGc']");
+    private final By zero = By.xpath("//div[@jsname='bkEvMb']");
+    private final By one = By.xpath("//div[@jsname='N10B9']");
+    private final By two = By.xpath("//div[@jsname='lVjWed']");
+    private final By three = By.xpath("//div[@jsname='KN1kY']");
+    private final By four = By.xpath("//div[@jsname='xAP7E']");
+    private final By five = By.xpath("//div[@jsname='Ax5wH']");
+    private final By six = By.xpath("//div[@jsname='abcgof']");
+    private final By sinus = By.xpath("//div[@jsname='aN1RFf']");
+    private final By answer = By.xpath("//span[@jsname='VssY5c']");
 
 
     public CalculatorPage sum2elementsInParenthesis (int a, int b) {
@@ -94,16 +94,12 @@ public class CalculatorPage extends BasePage {
     }
 
     public CalculatorPage multiplicationByThree () {
-        WebElement fieldInput = driver.findElement(inputField);
-        waitElementIsVisible(fieldInput).click();
         driver.findElement(multiplication).click();
         driver.findElement(three).click();
         return this;
     }
 
     public CalculatorPage subtractionFourty () {
-        WebElement fieldInput = driver.findElement(inputField);
-        waitElementIsVisible(fieldInput).click();
         driver.findElement(subtraction).click();
         driver.findElement(four).click();
         driver.findElement(zero).click();
@@ -111,8 +107,6 @@ public class CalculatorPage extends BasePage {
     }
 
     public CalculatorPage divisionByFive () {
-        WebElement fieldInput = driver.findElement(inputField);
-        waitElementIsVisible(fieldInput).click();
         driver.findElement(division).click();
         driver.findElement(five).click();
         return this;
@@ -130,18 +124,19 @@ public class CalculatorPage extends BasePage {
 
 
     public CalculatorPage getAnswer () {
-        WebElement fieldInput = driver.findElement(inputField);
-        waitElementIsVisible(fieldInput).click();
         driver.findElement(result).click();
         return this;
     }
 
     public CalculatorPage clickToSinus () {
-        WebElement fieldInput = driver.findElement(inputField);
-        waitElementIsVisible(fieldInput).click();
         driver.findElement(sinus).click();
         return this;
     }
+
+
+
+
+
 
     public int answerValueIntForOpt() throws NumberFormatException{
         WebElement element = driver.findElement(answer);
@@ -156,12 +151,14 @@ public class CalculatorPage extends BasePage {
         return answer;
     }
     public String answerValueForSinus () {
-        WebElement element = driver.findElement(sinus);
+        WebElement element = driver.findElement(answer);
         String answer = element.getAttribute("innerText");
         return answer;
     }
 
-
+    public void close () {
+        driver.quit();
+    }
 
 
 }
