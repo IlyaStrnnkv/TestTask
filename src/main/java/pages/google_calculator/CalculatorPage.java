@@ -156,9 +156,4 @@ public class CalculatorPage extends BasePage {
         return answer;
     }
 
-    public void close () {
-        driver.quit();
-    }
-
-
 }
