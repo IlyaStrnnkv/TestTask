@@ -22,4 +22,7 @@ public class BasePage {
         new WebDriverWait(driver, Duration.ofSeconds(EXPLICITLY_WAIT)).until(ExpectedConditions.visibilityOf(element));
         return element;
     }
+    public void close (){
+        driver.quit();
+    }
 }
